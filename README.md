@@ -4,12 +4,15 @@
 Code for Comprehensive Attribution: Inherently Explainable Vision Model with Feature Detector
 
 
-## Start Training
+## Training
 
 ```bash
 bash scripts/COMET.sh
 ```
-
+## Test checkpoint
+```bash
+bash scripts/COMET_eval.sh
+```
 ## To do
 
 1. Checkpoints
