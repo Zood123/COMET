@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2  python train.py -cfg conf/activation_map.yaml -gpu -eval "test_CAM"

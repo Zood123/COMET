@@ -1,0 +1,35 @@
+exp_name: nico_resvit18_multi_unshuffle_bf0.02_lr0.01
+net: t2tvit7
+dataset: NICO
+image_folder: /data2/wangtan/causal-invariant-attention/dataset/NICO/multi_classification
+cxt_dic_path: /home/xzz5508/code/Imbalance_ood/NICO_dataset/NICO_plus/name2context.json
+class_dic_path: /home/xzz5508/code/Imbalance_ood/NICO_dataset/NICO_plus/name2label.json
+training_opt:
+  seed: 0
+  batch_size: 128
+  optim:
+    sched: baseline
+  lr: 0.0005
+  warm: 2
+  epoch: 200
+  milestones: [80, 120, 160]
+  # milestones: [80, 140, 200]
+  save_epoch: 20
+  print_batch: 1
+  mean: [0.52418953, 0.5233741, 0.44896784]
+  std: [0.21851876, 0.2175944, 0.22552039]
+variance_opt:
+  balance_factor: 1
+  training_dist: {'dog': ['rock', 'dim', 'water', 'autumn', 'outdoor', 'grass'],
+                  'cat': ['rock', 'dim', 'water', 'autumn', 'outdoor', 'grass'],
+                  'bear': ['rock', 'dim', 'water', 'autumn', 'outdoor', 'grass'],
+                  'bird': ['rock', 'dim', 'water', 'autumn', 'outdoor', 'grass'],
+                  'cow': ['rock', 'dim', 'water', 'autumn', 'outdoor', 'grass'],
+                  'elephant': ['rock', 'dim', 'water', 'autumn', 'outdoor', 'grass'],
+                  'horse': ['rock', 'dim', 'water', 'autumn', 'outdoor', 'grass'],
+                  'monkey': ['rock', 'dim', 'water', 'autumn', 'outdoor', 'grass'],
+                  'rat': ['rock', 'dim', 'water', 'autumn', 'outdoor', 'grass'],
+                  'sheep': ['rock', 'dim', 'water', 'autumn', 'outdoor', 'grass']}
+  mode: 'baseline'
+  env_type: 'baseline'
+resume: False

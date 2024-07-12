@@ -1,0 +1,48 @@
+exp_name: RBF_trainselector_resnet18_flower_double_realx # RBF_trainselector_resnet18_2 # RBF_trainselector_resnet18_nico #RBF_trainselector_resnet18_fixed RBF_trainselector_resnet18_realx_eval
+net: RBF_trainselector # RBF_trainselector
+dataset: Imagenet9 # Imagenet9
+model_type:  resnet-gate
+depth: 56
+rbf_sig_start: 20.0 # imagnet 20
+rbf_sig_end: 50.0 # imagenet 50 other 90
+cuda_id: 1
+class_num: 9 #9
+fix_encoder: False
+initial_sigma: True
+pretrained: False
+image_folder: /data2/wangtan/causal-invariant-attention/dataset/NICO/multi_classification
+cxt_dic_path: /home/xzz5508/code/Imbalance_ood/NICO_dataset/NICO_plus/name2context.json
+class_dic_path: /home/xzz5508/code/Imbalance_ood/Imagenet_9name2label.json  # /home/xzz5508/code/Imbalance_ood/NICO_dataset/NICO_plus/name2label.json
+lr:  0.0001
+selector_type: rbf #rbf real-x
+hard_sample: False
+temperature: 0.1
+#betas: (0.9, 0.999)
+weight_decay: 0.0001
+training_opt:
+  seed: 2
+  batch_size: 128 #128
+  lr: 1e-4
+  warm: -1 #2
+  epoch: 200
+  milestones: [80, 120, 160]
+  # milestones: [80, 140, 200]
+  save_epoch: 20
+  print_batch: 1
+  mean: [0.4717, 0.4499, 0.3837] # imagenet [0.4717, 0.4499, 0.3837] nico [0.52418953, 0.5233741, 0.44896784]
+  std: [0.2600, 0.2516, 0.2575] #  imagenet [0.2600, 0.2516, 0.2575] nico [0.21851876, 0.2175944, 0.22552039]
+variance_opt:
+  balance_factor: 1
+  training_dist: {'dog': ['on_grass','in_water','in_cage','eating','on_beach','lying','running'],
+                  'cat': ['on_snow','at_home','in_street','walking','in_river','in_cage','eating'],
+                  'bear': ['in_forest','black','brown','eating_grass','in_water','lying','on_snow'],
+                  'bird': ['on_ground', 'in_hand','on_branch','flying','eating','on_grass','standing'],
+                  'cow': ['in_river', 'lying', 'standing','eating','in_forest','on_grass','on_snow'],
+                  'elephant': ['in_zoo', 'in_circus', 'in_forest', 'in_river','eating','standing','on_grass'],
+                  'horse': ['on_beach', 'aside_people', 'running','lying','on_grass','on_snow','in_forest'],
+                  'monkey': ['sitting', 'walking', 'in_water','on_snow','in_forest','eating','on_grass'],
+                  'rat': ['at_home', 'in_hole', 'in_cage','in_forest','in_water','on_grass','eating'],
+                  'sheep': ['eating', 'on_road','walking','on_snow','on_grass','lying','in_forest']}
+  mode: 'baseline'
+  env_type: 'baseline'
+resume: False
