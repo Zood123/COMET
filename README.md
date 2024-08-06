@@ -1,8 +1,9 @@
 
 # COMET: 
 
-Code for Comprehensive Attribution: Inherently Explainable Vision Model with Feature Detector
-
+Code for ECCV 2024:
+Comprehensive Attribution: Inherently Explainable Vision Model with Feature Detector
+https://arxiv.org/abs/2407.19308
 
 ## Training
 
