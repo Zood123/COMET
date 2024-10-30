@@ -15,6 +15,10 @@ bash scripts/COMET.sh
 bash scripts/COMET_eval.sh
 ```
 
+## ImageNet9 Training Data
+
+I noticed that the original author's training data link is broken. I've uploaded a new one here:
+https://drive.google.com/drive/folders/1I7mYRSLxvf-wNpP-EohJde8RjJmcmO1a?usp=sharing
 
 ## Acknowledgement
 This repo is modified from [CaaM](https://github.com/Wangt-CN/CaaM). We sincerely thank them for their contributions. We also thank authors of [ImageNet9](https://github.com/MadryLab/backgrounds_challenge) and [NICO++](https://github.com/xxgege/NICO-plus) datasets.
