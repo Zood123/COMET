@@ -26,6 +26,8 @@ bash scripts/COMET_eval.sh
 
 I noticed that the original author's training data link is broken. I've uploaded a new one here:
 https://drive.google.com/drive/folders/1I7mYRSLxvf-wNpP-EohJde8RjJmcmO1a?usp=sharing
+Note: We only use a subset of the training and validation data. Replace the folder paths in Imagenet_original_xxx.pickle.
+
 
 ## Acknowledgement
 This repo is modified from [CaaM](https://github.com/Wangt-CN/CaaM). We sincerely thank them for their contributions. We also thank authors of [ImageNet9](https://github.com/MadryLab/backgrounds_challenge) and [NICO++](https://github.com/xxgege/NICO-plus) datasets.
