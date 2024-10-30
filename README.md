@@ -7,10 +7,10 @@ https://arxiv.org/abs/2407.19308
 
 
 ## Framework
-(Framework.png)
+![Framework](Framework.png)
 
 ## Attribution Maps
-(Attribution Maps.png)
+![Attribution Maps Samples](Attribution Maps.png)
 
 ## Training
 
